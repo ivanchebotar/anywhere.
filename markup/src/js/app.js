@@ -6,7 +6,7 @@ import initFadeText from './components/fadeText';
 import { initStickyScrollBlock } from './components/fixedScroll';
 import initLeaveSearch from './components/leaveSearch';
 import { initMobileNav } from './components/mobileNav';
-import initPreloader from './components/preloader';
+// import initPreloader from './components/preloader';
 import { initAnchors } from './components/scrollTo';
 import initSwitcher from './components/themeSwitcher'
 
@@ -19,7 +19,7 @@ ready(() => {
   initStickyScrollBlock();
   initLeaveSearch();
   initMobileNav();
-  initPreloader();
+  // initPreloader();
   initAnchors();
   initSwitcher();
 });
