@@ -19,12 +19,16 @@
 }
 
 .logo {
-  width: 100px;
+  width: 120px;
   max-height: 20px;
 
   @include media('>=tablet') {
     width: 120px;
     max-height: 24px;
+  }
+
+  @include media('>=desktop') {
+    width: 150px;
   }
 
   path {
@@ -58,6 +62,7 @@
     position: absolute;
     left: 0;
     background-color: $primary;
+    border-radius: 2px;
 
     @include media('>=tablet') {
       width: 50px;
@@ -179,7 +184,7 @@
     top: 14px;
     left: 16px;
     color: rgba($secondary, 0.7);
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 

@@ -6,9 +6,10 @@ import initFadeText from './components/fadeText';
 import { initStickyScrollBlock } from './components/fixedScroll';
 import initLeaveSearch from './components/leaveSearch';
 import { initMobileNav } from './components/mobileNav';
-// import initPreloader from './components/preloader';
+import initPreloader from './components/preloader';
 import { initAnchors } from './components/scrollTo';
-import initSwitcher from './components/themeSwitcher'
+import initSwitcher from './components/themeSwitcher';
+import initValidation from './components/validation'
 
 ready(() => {
   HTML.classList.add('is-loaded');
@@ -19,7 +20,8 @@ ready(() => {
   initStickyScrollBlock();
   initLeaveSearch();
   initMobileNav();
-  // initPreloader();
+  initPreloader();
   initAnchors();
   initSwitcher();
+  initValidation();
 });

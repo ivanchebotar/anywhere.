@@ -86,3 +86,19 @@
     content: $icon-list;
   }
 }
+
+.icon-lock {
+  &:before {
+    content: $icon-lock;
+  }
+}
+.icon-eye {
+  &:before {
+    content: $icon-eye;
+  }
+}
+.icon-eye-cross {
+  &:before {
+    content: $icon-eye-cross;
+  }
+}

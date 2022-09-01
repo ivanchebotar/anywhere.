@@ -49,8 +49,10 @@ $purple-04: #5a0af9;
 
 $grey-01: #e5e5e5;
 $grey-02: #716f6b;
+$grey-03: #ededed;
 
 $red-01: #b71717;
+$red-02: #f43c3c;
 
 $primary: $blue-01;
 $secondary: $white-02;
@@ -84,7 +86,8 @@ $rounded-circle: 50%;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: 'Montserrat', sans-serif;
+// $font-family-sans-serif: 'Montserrat', sans-serif;
+$font-family-sans-serif: 'GT Walsheim Pro', sans-serif;
 $font-family-sans-serif-secondary: $font-family-sans-serif;
 $font-family-base: $font-family-sans-serif;
 $base-font-path: '../fonts';
