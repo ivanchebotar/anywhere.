@@ -1,0 +1,177 @@
+// stylelint-disable selector-no-qualifying-type, selector-max-compound-selectors
+
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the form elements of the site
+// -----------------------------------------------------------------------------
+
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+textarea {
+  @include transition(border-color);
+  border: 1px solid currentColor;
+  background-color: transparent;
+  width: 100%;
+  min-width: 0;
+  padding: 1.2rem 2.4rem;
+  border-radius: 0;
+  -webkit-appearance: none;
+
+  &:focus,
+  &:hover {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+input[type='search'] {
+  @include transition(background-color);
+  width: 100%;
+  padding: 14px 30px 14px 50px;
+  background-color: $purple-01;
+  border: 0;
+  outline: none;
+  border-radius: 10px;
+  color: $secondary;
+  font-size: 16px;
+  -webkit-appearance: none;
+
+  &::placeholder {
+    color: rgba($secondary, 0.7);
+  }
+
+  &:focus,
+  &:hover {
+    box-shadow: none;
+    outline: none;
+    background-color: $purple-04;
+  }
+}
+
+input[type='password'] {
+  @include transition(border-color);
+  outline: none;
+  border: 1px solid rgba($secondary, 0.7);
+  padding: 19px 30px 19px 40px;
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 10px;
+  color: $secondary;
+  font-size: 16px;
+
+  @include media('>=tablet') {
+    padding: 14px 30px 14px 40px;
+  }
+
+  &:focus,
+  &:hover {
+    box-shadow: none;
+    outline: none;
+    border: 1px solid $secondary;
+
+    &::placeholder {
+      color: $secondary;
+    }
+  }
+
+  &::placeholder {
+    @include transition(color);
+    color: rgba($secondary, 0.7);
+  }
+
+  .error & {
+    border: 1px solid $red-02;
+    color: $red-02;
+  }
+}
+
+label {
+  color: $secondary;
+  font-size: 14px;
+  margin: 0 0 10px;
+  display: block;
+}
+
+button[type='submit'] {
+  width: 100%;
+  display: block;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.input-holder {
+  position: relative;
+  top: auto;
+  left: auto;
+
+  &:before {
+    content: $icon-lock;
+    font-family: $icomoon-font-family;
+    color: $secondary;
+    font-size: 13px;
+    position: absolute;
+    top: 19px;
+    left: 18px;
+
+    @include media('>=tablet') {
+      top: 14px;
+    }
+  }
+
+  &.error {
+    animation: move 0.1s ease-in-out;
+  }
+}
+
+@keyframes move {
+  0% {
+    transform: translate(-15px, 0);
+  }
+
+  20% {
+    transform: translate(15px, 0);
+  }
+
+  40% {
+    transform: translate(-12px, 0);
+  }
+
+  60% {
+    transform: translate(12px, 0);
+  }
+
+  80% {
+    transform: translate(-10px, 0);
+  }
+
+  100% {
+    transform: translate(10px, 0);
+  }
+}
+
+.hint {
+  @include transition(opacity visibility);
+  opacity: 0;
+  visibility: hidden;
+  touch-action: none;
+  display: block;
+  padding: 4px 0 10px;
+  font-size: 14px;
+  text-align: left;
+
+  &--error {
+    color: $red-02;
+  }
+
+  &.show {
+    opacity: 1;
+    visibility: visible;
+    touch-action: auto;
+  }
+}

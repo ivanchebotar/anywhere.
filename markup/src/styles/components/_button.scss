@@ -1,0 +1,60 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.btn {
+  outline: none;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  cursor: pointer;
+
+  &--primary {
+    @include transition(transform background-color color);
+    display: block;
+    text-align: center;
+    background: $secondary;
+    color: $primary;
+    font-weight: $font-weight-semibold;
+    padding: 14px 46px;
+    border-radius: 10px;
+    z-index: 0;
+    line-height: 1;
+
+    @include media('>=tablet') {
+      display: inline-block;
+    }
+
+    &:hover {
+      color: $primary;
+      transform: scale(1.05);
+    }
+
+    &--alt {
+      border: 1px solid transparent;
+      padding: 20px 46px;
+
+      @include media('>=tablet') {
+        padding: 15.2px 46px;
+      }
+      
+      &:hover {
+        color: $secondary;
+        transform: scale(1);
+        background-color: $primary;
+      }
+    }
+  }
+}
+
+.btn-holder {
+  display: block;
+
+  @include media('>=tablet') {
+    display: inline-block;
+  }
+}
+
+
+
+
+

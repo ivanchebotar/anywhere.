@@ -1,0 +1,159 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the decor component.
+// -----------------------------------------------------------------------------
+.decor {
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.8s ease-in-out;
+
+  &--first {
+    background-image: url('./../images/img02.png');
+    width: 100px;
+    height: 124px;
+    top: 320px;
+    left: -60px;
+    transition-delay: 1s;
+    animation: decorAnimateFirst 4s ease-in-out infinite;
+
+    @include media('>=desktop') {
+      right: 100px;
+      width: 128px;
+      height: 174px;
+      bottom: 320px;
+      top: auto;
+    }
+
+    .section-active & {
+      bottom: 300px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &--second {
+    background-image: url('./../images/img03.png');
+    width: 110px;
+    height: 100px;
+    top: -40px;
+    right: -10px;
+    transition-delay: 1.2s;
+    animation: decorAnimateSecond 4s ease-in-out infinite;
+    animation-delay: 0.4s;
+
+    @include media('>=desktop') {
+      width: 130px;
+      height: 120px;
+    }
+
+    @include media('>=lg-desktop') {
+      right: 200px;
+    }
+
+    .section-active & {
+      top: -20px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &--third {
+    background-image: url('./../images/img04.png');
+    width: 100px;
+    height: 86px;
+    right: -40px;
+    bottom: 100px;
+    transition-delay: 1.4s;
+    animation: decorAnimateThird 4s ease-in-out infinite;
+    animation-delay: 1s;
+
+    @include media('>=desktop') {
+      right: -80px;
+      width: 180px;
+      height: 146px;
+    }
+
+    .section-active & {
+      bottom: 80px;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+@keyframes decorAnimateFirst {
+  0% {
+    top: 300px;
+    transform: rotate(0);
+
+    @include media('>=desktop') {
+      bottom: 280px;
+      top: auto;
+    }
+  }
+
+  50% {
+    top: 320px;
+    transform: rotate(5deg);
+
+    @include media('>=desktop') {
+      bottom: 300px;
+      top: auto;
+    }
+  }
+
+  100% {
+    top: 300px;
+    transform: rotate(0);
+
+    @include media('>=desktop') {
+      bottom: 300px;
+      top: auto;
+    }
+  }
+}
+
+@keyframes decorAnimateSecond {
+  0% {
+    top: -10px;
+  }
+
+  50% {
+    top: -20px;
+  }
+
+  100% {
+    top: -10px;
+  }
+}
+
+@keyframes decorAnimateThird {
+  0% {
+    bottom: 0;
+    transform: rotate(0);
+
+    @include media('>=desktop') {
+      bottom: 80px;
+    }
+  }
+
+  50% {
+    bottom: 20px;
+    transform: rotate(5deg);
+
+    @include media('>=desktop') {
+      bottom: 100px;
+    }
+  }
+
+  100% {
+    bottom: 0;
+    transform: rotate(0);
+
+    @include media('>=desktop') {
+      bottom: 80px;
+    }
+  }
+}

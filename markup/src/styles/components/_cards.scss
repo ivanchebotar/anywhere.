@@ -1,0 +1,17 @@
+.card-holder {
+  display: flex;
+  margin: 0 -20px 50px;
+
+  .card {
+    padding: 0 20px;
+    width: 50%;
+    position: relative;
+    top: auto;
+    left: auto;
+    border-right: 1px dashed $purple-01;
+
+    &:last-child {
+      border: 0;
+    }
+  }
+}

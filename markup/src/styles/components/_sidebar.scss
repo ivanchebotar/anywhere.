@@ -1,0 +1,67 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the sidebar component.
+// -----------------------------------------------------------------------------
+.sidebar__holder {
+  position: relative;
+  display: none;
+
+  @include media('>=tablet') {
+    display: block;
+    width: 30%;
+    padding: 0 20px;
+  }
+}
+
+.sidebar {
+  h6 {
+    text-transform: uppercase;
+    color: $grey-02;
+    font-weight: $font-weight-semibold;
+    letter-spacing: 1px;
+    margin: 0 0 8px;
+    padding: 10px 0;
+  }
+}
+
+.sidebar__list {
+  @extend .list-zeroing;
+
+  li {    
+    a {
+      @include transition(background-color color);
+      background-color: transparent;
+      padding: 10px 12px;
+      border-radius: 10px;
+      color: $primary;
+      display: inline-block;
+  
+      &:hover {
+        background-color: $grey-01;
+      }
+
+      .dark-mode & {
+        color: $secondary;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+
+      &.anchor-active {
+        color: $secondary;
+        background-color: $primary;
+      }
+    }
+  }
+
+  ul {
+    padding: 0 0 0 15px;
+    margin: 0;
+
+    li {
+      a {
+        padding: 8px 10px;
+      }
+    }
+  }
+}
