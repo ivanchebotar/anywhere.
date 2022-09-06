@@ -106,6 +106,12 @@ body {
       margin: 0;
     }
   }
+
+  strong {
+    .dark-mode & {
+      color: $secondary;
+    }
+  }
 }
 
 .attention {
@@ -430,6 +436,14 @@ body {
 
     .dark-mode & {
       color: $secondary;
+    }
+  }
+
+  td {
+    p {
+      .dark-mode & {
+        color: $primary;
+      }
     }
   }
 }
